@@ -6,7 +6,9 @@
 
     &__logo {
 
-        img {}
+        img {
+
+        }
     }
 
     &__menu {
@@ -21,5 +23,16 @@
             }
         }
 
+    }
+    &__links {
+        a {
+            font-size: $font-sm;
+            color: $grayishBlue;
+        }
+    }
+
+    &__cta {
+        font-size: $font-sm;
+        color: $white;
     }
 }
