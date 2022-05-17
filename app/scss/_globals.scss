@@ -3,7 +3,9 @@ html {
     box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
@@ -15,10 +17,22 @@ body {
     font-weight: 300;
     color: $grayishBlue;
     line-height: 1.3;
+
+    &.noscroll {
+        overflow: hidden;
+    }
 }
 
-a, a:visited, a:hover{
+a,
+a:visited,
+a:hover {
     text-decoration: none;
+}
+
+// Spacing
+.container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 // flexbox
@@ -39,7 +53,8 @@ a, a:visited, a:hover{
 }
 
 // Buttons
-button, .button {
+button,
+.button {
     padding: 0.875rem 2.1875rem;
     background: linear-gradient(to right, $limeGreen, $brightCyan);
     border: 0;
@@ -53,15 +68,17 @@ button, .button {
 
 // Visibility
 .hide-for-mobile {
+
     // hide for tablet and mobile devices
-    @include breakpoint-down(medium){
+    @include breakpoint-down(medium) {
         display: none;
     }
 }
 
 .hide-for-desktop {
+
     // hide for desktop viewport widths
-    @include breakpoint-up(large){
+    @include breakpoint-up(large) {
         display: none;
     }
 }
